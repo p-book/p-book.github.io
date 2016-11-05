@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row main">
+                <div class="panel-heading">
+                    <div class="panel-title text-center">
+                        <h1 class="title">P-Book</h1>
+                        <hr />
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <section id="editor" class="editor">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h1 id="fullname">Názov knihy</h1>
+                        <div class="span">
+                            <button type="button" class="btn btn-default btn-block">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pridaj stranu
+                            </button> 
+
+                            <button type="button" class="btn btn-default btn-block text-left" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pridaj miesto na fotku
+                            </button> 
+                            <button type="button" class="btn btn-default text-left btn-block" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pridaj text
+                            </button> 
+
+
+                            <div class="dropdown">
+                                <h4>Rozloženie:</h4>
+                                <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Rozloženie <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Rozloženie 1</a></li>
+                                    <li><a href="#">Rozloženie 2</a></li>
+                                    <li><a href="#">Rozloženie 3</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <h4>Papier:</h4>
+                                <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Papier <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Foto-papier</a></li>
+                                    <li><a href="#">Matný papier</a></li>
+                                    <li><a href="#">Lesklý papier</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <h4>Pozadie:</h4>
+                                <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Pozadie <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Pozadie 1</a></li>
+                                    <li><a href="#">Pozadie 2</a></li>
+                                    <li><a href="#">Pozadie 3</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Vlastné pozadie</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <h4>Väzba:</h4>
+                                <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Väzba <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Pevná</a></li>
+                                    <li><a href="#">Hrebeňová</a></li>
+                                    <li><a href="#">Kalendárová</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid"> <!-- this is to make it responsive to your screen width-->
+                        <div class="row">
+                            <div class="col-md-9 editor">  <!-- myClassName is defined in my CSS as you defined your container -->
+                                <img class="img-editorbg img-responsive" src="img/editor-bg.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+    </body>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $("#genTitle").click(function(){
+
+    // Fetch Input Value
+    var val = $("#newTitle").val();
+
+    // Set the value fetched as the html of header
+    $(".artTitle").html(val);
+});
+
+
+        $('#fullname').click(function(){
+            var name = $(this).text();
+            $(this).html('');
+            $('<input></input>')
+            .attr({
+                'type': 'text',
+                'name': 'fname',
+                'id': 'txt_fullname',
+                'size': '15',
+                'value': name
+            })
+            .appendTo('#fullname');
+            $('#txt_fullname').focus();
+        });
+
+        $(document).on('blur','#txt_fullname', function(){
+            var name = $(this).val();
+            $.ajax({
+              type: 'post',
+              url: 'change-name.xhr?name=' + name,
+              success: function(){
+                $('#fullname').text(name);
+            }
+        });
+        });
+        $( function() {
+            $( "#rectangle" ).draggable();
+            containment: "parent"
+            cursor: "crosshair"
+        } );
+
+        $(function() {
+          $("rectangle").click(function() {
+            $(this).css('background-image', 'url(imag/Debil.jpg)');
+        });
+      }):
+
+        function hideIcon(self) {
+            self.style.backgroundImage = 'none';
+        }
+    </script>
+    </html>
