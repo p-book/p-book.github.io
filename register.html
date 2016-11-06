@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -33,7 +34,7 @@
 <body>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <!--<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -96,7 +97,56 @@
         </li>
         </ul>
     </nav>
+-->
 
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+        <div class="container nav-bar">
+            <div class="row">
+                <div class="module left">
+                    <div class="text-vertical-center nav-title">
+                        <a href="index.html"><h1>P-Book</h1> </a>
+                    </div>
+                </div>
+                <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div class="module-group right">
+                    <div class="module left">
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul id="menu" class="menu">
+                                <li id="menu-item-1636" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1636"><a href="">Editor</a></li>
+                                <li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a href="">Cennik</a></li>
+                                <li id="menu-item-1638" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1638"><a href="">Kontakt</a></li>
+                                <!--<li id="menu-item-1639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1639 dropdown">The Tests
+                                <ul role="menu" class=" dropdown-menu" style="">
+                                    <li id="menu-item-1697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1697"><a title="Page Image Alignment" href="https://colorlib.com/shapely/about/page-image-alignment/">Page Image Alignment</a></li>
+                                    <li id="menu-item-1698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1698"><a title="Page Markup And Formatting" href="https://colorlib.com/shapely/about/page-markup-and-formatting/">Page Markup And Formatting</a></li>
+                                    <li id="menu-item-1640" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1640"><a title="Clearing Floats" href="https://colorlib.com/shapely/about/clearing-floats/">Clearing Floats</a></li>
+                                    <li id="menu-item-1641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1641"><a title="Page with comments" href="https://colorlib.com/shapely/about/page-with-comments/">Page with comments</a></li>
+                                    <li id="menu-item-1642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1642"><a title="Page with comments disabled" href="https://colorlib.com/shapely/about/page-with-comments-disabled/">Page with comments disabled</a></li>
+                                </ul>-->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end of menu module-->
+                    <!--<div class="module widget-handle search-widget-handle left">
+                        <div class="search">
+                            <i class="fa fa-search"></i>
+                            <span class="title">Site Search</span>
+                        </div>
+                        <div class="function">
+                            <form role="search" method="get" id="searchform" class="search-form" action="https://colorlib.com/shapely/">
+                                <input placeholder="Type Here" value="" name="s" id="s" type="text">
+                                <input class="btn btn-fillded searchsubmit" id="searchsubmit" value="Search" type="submit">
+                            </form>
+                        </div>
+                    </div>-->
+                </div>
+                <!--end of module group-->
+            </div>
+        </div>
+    </nav>
 
 
 
@@ -104,39 +154,20 @@
             <div class="row main">
                 <div class="panel-heading">
                    <div class="panel-title text-center">
-                        <h1 class="title">P-Book</h1>
-                        <hr />
+                        <!--<h1 class="title">P-Book</h1>
+                        <hr />-->
                     </div>
                 </div> 
                 <div class="main-login main-center">
-                    <form class="form-horizontal" method="post" action="#">
-                        
-                        <div class="form-group">
-                            <label for="name" class="cols-sm-2 control-label">Meno</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="name" id="name"  placeholder="Meno"/>
-                                </div>
-                            </div>
-                        </div>
-
+                    <form class="form-horizontal" method="post" action="#" data-toggle="validator">
+                        <h2 style="margin-top: 30px">Prihlasovacie &#250;daje</h2>
                         <div class="form-group">
                             <label for="email" class="cols-sm-2 control-label">Email</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="email" id="email"  placeholder="Email"/>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="username" class="cols-sm-2 control-label">Username</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="username" id="username"  placeholder="Username"/>
+                                    <input type="text" class="form-control" name="email" id="email"  placeholder="Email" data-error="Zadan&#225; emailov&#225; adresa je neplatn&#225;" required/>
+                                    <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                         </div>
@@ -160,6 +191,87 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        <h2 style="margin-top: 70px">Osobn&#233; &#250;daje</h2>
+                        <div class="form-group">
+                            <label for="name" class="cols-sm-2 control-label">Meno</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="name" id="name"  placeholder="Meno"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Priezvisko" class="cols-sm-2 control-label">Priezvisko</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="priezvisko" id="priezvisko"  placeholder="Priezvisko"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Company" class="cols-sm-2 control-label">Firma</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-building fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="company" id="company"  placeholder="Firma"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Address" class="cols-sm-2 control-label">Ulica + &#269;&#237;slo</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="address" id="address"  placeholder="Ulica + &#269;&#237;slo"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="PSC" class="cols-sm-2 control-label">PS&#268;</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="psc" id="psc"  placeholder="PS&#268;"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Obec" class="cols-sm-2 control-label">Obec</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="obec" id="obec"  placeholder="Obec"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Krajina" class="cols-sm-2 control-label">Krajina</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-globe fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="krajina" id="krajina"  placeholder="Krajina"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Suhlas&#237;m s <a href="#">podmienakmi</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div> 
 
                         <div class="form-group ">
                             <button type="button" class="btn btn-primary btn-lg btn-block login-button">Registrovať</button>
