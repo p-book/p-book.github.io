@@ -413,3 +413,7 @@ li.dropdown.open a {
     border-radius: 1em;
     margin: 0 auto;
 }
+
+.wrapper {
+    position: absolute;
+}
