@@ -338,7 +338,7 @@ li.dropdown.open a {
     margin-bottom: 10px;
 }
 .btn-fb{
-    margin-bottom: 12px;
+    margin-bottom: 12px !important;
     color: #fff !important;
     background-color:#3b5998;
 }
