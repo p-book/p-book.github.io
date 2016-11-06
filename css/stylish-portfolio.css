@@ -378,12 +378,38 @@ li.dropdown.open a {
     position: relative;
 
 }
-.placeholder   {
+#placeholder1   {
     position: absolute;
    top: 0px;
    left: 15px;
 
 }
-canvas#viewport { border: 1px solid white; width: 900px; }
+#placeholder2   {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+.placeholder{
+    width: 150px;
+    height: 150px;
+    padding: 0.5em;
+}
 
+#dragThis {
+    width: 6em;
+    height: 6em;
+    padding: 0.5em;
+    border: 3px solid #ccc;
+    border-radius: 0 1em 1em 1em;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+}
 
+#dropHere {
+    width: 12em;
+    height: 12em;
+    padding: 0.5em;
+    border: 3px solid #f90;
+    border-radius: 1em;
+    margin: 0 auto;
+}
