@@ -107,7 +107,8 @@
                     <div class="container-fluid"> <!-- this is to make it responsive to your screen width-->
                         <div class="row">
                             <div class="col-md-9 editor">  <!-- myClassName is defined in my CSS as you defined your container -->
-                                <img class="img-editorbg img-responsive" src="img/editor-bg.jpg">
+                                <img class="img-editorbg img-responsive" src="img/editor-bg.jpg" alt=""/>
+                                <img src="http://placehold.it/140x100" id="placeholder1" class="placeholder" name="p1" onclick="window.document.p1.src='img/Debil.jpg';window.document.p1.height = 100; window.document.p1.width = 140"/>
                             </div>
                         </div>
                     </div>
@@ -128,55 +129,12 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $("#genTitle").click(function(){
+      $( function() {
+          $( "#placeholder1" ).draggable({
+              containment: "parent"
+          });
 
-    // Fetch Input Value
-    var val = $("#newTitle").val();
-
-    // Set the value fetched as the html of header
-    $(".artTitle").html(val);
-});
-
-
-        $('#fullname').click(function(){
-            var name = $(this).text();
-            $(this).html('');
-            $('<input></input>')
-            .attr({
-                'type': 'text',
-                'name': 'fname',
-                'id': 'txt_fullname',
-                'size': '15',
-                'value': name
-            })
-            .appendTo('#fullname');
-            $('#txt_fullname').focus();
-        });
-
-        $(document).on('blur','#txt_fullname', function(){
-            var name = $(this).val();
-            $.ajax({
-              type: 'post',
-              url: 'change-name.xhr?name=' + name,
-              success: function(){
-                $('#fullname').text(name);
-            }
-        });
-        });
-        $( function() {
-            $( "#rectangle" ).draggable();
-            containment: "parent"
-            cursor: "crosshair"
-        } );
-
-        $(function() {
-          $("rectangle").click(function() {
-            $(this).css('background-image', 'url(imag/Debil.jpg)');
-        });
-      }):
-
-        function hideIcon(self) {
-            self.style.backgroundImage = 'none';
-        }
+      } );
+      $("body select").msDropDown();
     </script>
     </html>

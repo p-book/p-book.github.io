@@ -372,3 +372,18 @@ li.dropdown.open a {
         border-top:0 none;
     }
 }
+/* misko*/
+
+.editor {
+    position: relative;
+
+}
+.placeholder   {
+    position: absolute;
+   top: 0px;
+   left: 15px;
+
+}
+canvas#viewport { border: 1px solid white; width: 900px; }
+
+
