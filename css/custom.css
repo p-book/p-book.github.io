@@ -34,6 +34,15 @@
     display: inline-flex;
 }
 
+#register-title {
+    color: #222222 !important;
+    font-size: 26px;
+}
+
+.navbar-default .nav-other-page > li > a:hover {
+    color: rgb(123, 124, 124) !important;
+}
+
 
 .navbar-default {
   background-color: white;
@@ -84,6 +93,10 @@
     background-color: transparent;
     /*border-color: rgba(255, 255, 255, 0.3);*/
   }
+
+    .navbar-register {
+        background-color: white;
+    }
   .navbar-default .navbar-header .navbar-brand {
     color: transparent;
   }
@@ -109,7 +122,7 @@
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: cyan;
+    color: #000000;
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
