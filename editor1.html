@@ -48,16 +48,17 @@
                     <div class="col-md-3">
                         <h1 id="fullname">Názov knihy</h1>
                         <div class="span">
-                            <button type="button" class="btn btn-default btn-block">
-                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pridaj stranu
-                            </button> 
-
+                            <a href="editor2.html">
+                                <button type="button" class="btn btn-default btn-block">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Pridaj stranu
+                                </button>
+                            </a>
                             <button type="button" class="btn btn-default btn-block text-left" aria-label="Left Align">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pridaj miesto na fotku
-                            </button> 
+                            </button>
                             <button type="button" class="btn btn-default text-left btn-block" aria-label="Left Align">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pridaj text
-                            </button> 
+                            </button>
 
 
                             <div class="dropdown">
@@ -85,7 +86,7 @@
                                 <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Pozadie <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="#"><img src="img/Debil.jpg"/> </a></li>
+                                    <li><a href="#">Pozadie 1</a></li>
                                     <li><a href="#">Pozadie 2</a></li>
                                     <li><a href="#">Pozadie 3</a></li>
                                     <li role="separator" class="divider"></li>
@@ -108,6 +109,11 @@
                     <div class="container-fluid"> <!-- this is to make it responsive to your screen width-->
                         <div class="row">
                             <div class="col-md-9 editor">  <!-- myClassName is defined in my CSS as you defined your container -->
+                                <div class="text-center">
+                                    <ul class="pagination">
+                                        <li class="active"><a href="editor1.html">1</a></li>
+                                    </ul>
+                                </div>
                                 <img class="img-editorbg img-responsive" src="img/editor-bg.jpg" alt=""/>
                                 <h4>Loaded photos</h4>
                                 <div class="col-md-1 wrapper" style="display:inline-block">

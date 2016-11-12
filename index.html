@@ -34,68 +34,36 @@
 <body>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>P-Book</a>
-            </li>
-            <li>
-                <a href="#top" onclick=$("#menu-close").click();>Domov</a>
-            </li>
-            <li>
-                <a href="#" onclick=$("#menu-close").click();>Fotokniha (Editor)</a>
-            </li>
-            <li>
-                <a href="pricing.html" onclick=$("#menu-close").click();>Cennik</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Produkty</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Kontakt</a>
-            </li>
-            <li class="dropdown">
-          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Prihlásiť sa <span class="caret"></span></a>
-				<ul id="login-dp" class="dropdown-menu">
-					<li>
-						<div class="row">
-							<div class="col-md-12">
-								<h5 class="sidebar-login-text">Prihlásiť sa cez</h5>
-								<div class="social-buttons">
-									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-									<a href="#" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
-								</div>
-                                <h5 class="sidebar-login-text">alebo</h5>
-								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-										<div class="form-group">
-											 <label class="sr-only" for="exampleInputEmail2">Email</label>
-											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email" required>
-										</div>
-										<div class="form-group">
-											 <label class="sr-only" for="exampleInputPassword2">Heslo</label>
-											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Heslo" required>
-                                             <div class="help-block text-right"><a href=""><h5 class="sidebar-login-text lost-pass">Zabudli ste heslo?</h5></a></div>
-										</div>
-										<div class="form-group">
-											 <button type="submit" class="btn btn-primary btn-block">Prihlásiť</button>
-										</div>
-										<div class="checkbox">
-											 <label>
-											 <input type="checkbox"><h5 class="sidebar-login-text">Zostať prihlásený</h5>
-											 </label>
-										</div>
-								 </form>
-							</div>
-							<div class="bottom text-center">
-								<a href="register.html"><b>Registrovať sa</b></a>
-							</div>
-					 	</div>
-					</li>
-				</ul>
-        	</li>
-        </ul>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a id='navText'class="navbar-brand page-scroll" href="#top">P-Book</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Domov</a>
+                    </li>
+                    <li>
+                        <a href="#">Fotokniha (Editor)</a>
+                    </li>
+                    <li>
+                        <a href="#services">Na&#353;e slu&#382;by & Cenn&#237;k</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Produkty</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
     </nav>
 
     <!-- Header -->
@@ -131,7 +99,7 @@
                         <img class="img-portfolio img-responsive" src="img/format_magazine.jpg">
                         <h3>&#268;asopis</h3>
                         <br />
-                        <a href="#" class="btn btn-lg btn-dark">Vytvori&#357;</a>
+                        <a href="#contact" class="btn btn-lg btn-dark">Vytvori&#357;</a>
                     </li>
                     </ul>
                 </div>
@@ -216,7 +184,7 @@
     <!-- Callout -->
     <aside class="callout">
         <div class="text-vertical-center text-services">
-            <h1>Vertically Centered Text</h1>
+            <h1>Pozrie&#357; cenn&#237;k</h1>
         </div>
     </aside>
 
@@ -291,44 +259,49 @@
     </section>-->
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>P-Book</strong>
-                    </h4>
-                    <p>Ilkovičova 2
-                        <br>Bratislava, 841 04</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">support@p-book.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2016</p>
+    <section id="contact">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <h4><strong>P-Book</strong>
+                        </h4>
+                        <p>Ilkovičova 2
+                            <br>Bratislava, 841 04</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                            <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">support@p-book.com</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                            </li>
+                        </ul>
+                        <hr class="small">
+                        <p class="text-muted">Copyright &copy; Your Website 2016</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
+            <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+        </footer>
+    </section>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>

@@ -161,12 +161,20 @@
                 <div class="main-login main-center">
                     <form class="form-horizontal" method="post" action="#" data-toggle="validator">
                         <h2 style="margin-top: 30px">Prihlasovacie &#250;daje</h2>
+
+                        <div class="form-group has-danger">
+                            <label class="form-control-label" for="inputDanger1">Input with danger</label>
+                            <input type="email" class="form-control form-control-danger" id="inputDanger1">
+                            <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+                            <small class="form-text text-muted">Example help text that remains unchanged.</small>
+                        </div>
+
                         <div class="form-group">
                             <label for="email" class="cols-sm-2 control-label">Email</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="email" id="email"  placeholder="Email" data-error="Zadan&#225; emailov&#225; adresa je neplatn&#225;" required/>
+                                    <input type="email" class="form-control" name="email" id="email"  placeholder="Email" data-error="Zadan&#225; emailov&#225; adresa je neplatn&#225;" required/>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -238,7 +246,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="psc" id="psc"  placeholder="PS&#268;"/>
+                                    <input type="number" class="form-control" name="psc" id="psc"  placeholder="PS&#268;"/>
                                 </div>
                             </div>
                         </div>
