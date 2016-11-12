@@ -65,9 +65,10 @@
                                 <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Rozloženie <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="#">Rozloženie 1</a></li>
-                                    <li><a href="#">Rozloženie 2</a></li>
-                                    <li><a href="#">Rozloženie 3</a></li>
+                                    <li><a href="#"><img id="rz_1" src="img/rozlozenie_1_menu.png" width="192" height="120" alt=""/></a></li>
+                                    <li><a href="#"><img id="rz_2" src="img/rozlozenie_2_menu.png" width="192" height="120" alt=""/></a></li>
+                                    <li><a href="#"><img id="rz_3" src="img/rozlozenie_3_menu.png" width="192" height="120" alt=""/></a></li>
+									<li><a id="rz_vlastne" href="#">Vlastné rozloženie</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown">
@@ -85,9 +86,9 @@
                                 <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Pozadie <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="#"><img src="img/Debil.jpg"/> </a></li>
-                                    <li><a href="#">Pozadie 2</a></li>
-                                    <li><a href="#">Pozadie 3</a></li>
+                                    <li><a href="#"><img id="bg_1" src="img/editor-bg.jpg" width="192" height="120" alt=""/></a></li>
+                                    <li><a href="#"><img id="bg_2" src="img/editor-bg_2.jpg" width="192" height="120" alt=""/></a></li>
+                                    <li><a href="#"><img id="bg_3" src="img/editor-bg_3.jpg" width="192" height="120" alt=""/></a></li>
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#">Vlastné pozadie</a></li>
                                 </ul>
@@ -108,7 +109,8 @@
                     <div class="container-fluid"> <!-- this is to make it responsive to your screen width-->
                         <div class="row">
                             <div class="col-md-9 editor">  <!-- myClassName is defined in my CSS as you defined your container -->
-                                <img class="img-editorbg img-responsive" src="img/editor-bg.jpg" alt=""/>
+                                <img id="background_image" class="img-editorbg img-responsive" src="img/editor-bg.jpg" alt=""/>
+								<img id="rozlozenie" class="img-editorbg img-responsive" src="img/rozlozenie_vlastne.png" style="position: absolute; top: 0px; left: 15px;" height="529,68px" width="847,5px"alt=""/>
                                 <h4>Loaded photos</h4>
                                 <div class="col-md-1 wrapper" style="display:inline-block">
                                     <img id="image" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
@@ -170,6 +172,41 @@
       $(function() {
           $('#image4').resizable().click(function () {
               $(this).attr('src', 'img/troll.jpg')
+          });
+      });
+	  $(function() {
+          $('#bg_1').click(function () {
+              $('#background_image').attr('src', 'img/editor-bg.jpg')
+          });
+      });
+	  $(function() {
+          $('#bg_2').click(function () {
+              $('#background_image').attr('src', 'img/editor-bg_2.jpg')
+          });
+      });
+	  $(function() {
+          $('#bg_3').click(function () {
+              $('#background_image').attr('src', 'img/editor-bg_3.jpg')
+          });
+      });
+	  $(function() {
+          $('#rz_1').click(function () {
+              $('#rozlozenie').attr('src', 'img/rozlozenie_1.png')
+          });
+      });
+	  $(function() {
+          $('#rz_2').click(function () {
+              $('#rozlozenie').attr('src', 'img/rozlozenie_2.png')
+          });
+      });
+	  $(function() {
+          $('#rz_3').click(function () {
+              $('#rozlozenie').attr('src', 'img/rozlozenie_3.png')
+          });
+      });
+	  $(function() {
+          $('#rz_vlastne').click(function () {
+              $('#rozlozenie').attr('src', 'img/rozlozenie_vlastne.png')
           });
       });
 
