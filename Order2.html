@@ -106,16 +106,20 @@
         </div>
         <div class="row">
           <div class="col-lg-3">
-            <h1 class="display-1"><i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;Košík</h1>
+            <h1 class="display-1">
+                                <i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;Košík</h1>
           </div>
           <div class="col-lg-3      ">
-            <h1 class="display-1"><i class="glyphicon glyphicon-credit-card"></i>&nbsp;Doprava a platba</h1>
+            <h1 class="display-1">
+                                <i class="glyphicon glyphicon-credit-card text-primary"></i>&nbsp;Doprava a platba</h1>
           </div>
           <div class="col-lg-3 ">
-            <h1 class="display-1"><i class="glyphicon glyphicon-globe"></i>&nbsp;Dodacie údaje</h1>
+            <h1 class="display-1">
+                                <i class="glyphicon glyphicon-globe"></i>&nbsp;Dodacie údaje</h1>
           </div>
           <div class="col-lg-3">
-            <h1 class="display-1"><i class="glyphicon glyphicon-check"></i>&nbsp;Súhrn</h1>
+            <h1 class="display-1">
+                                <i class="glyphicon glyphicon-check"></i>&nbsp;Súhrn</h1>
           </div>
         </div>
       </div>
@@ -126,47 +130,144 @@
   <div class="section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <h1 class="display-1">Doprava</h1>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="">Osobný odber na pobočke</label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="">Slovenská pošta - 5 eur</label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="">Kuriér - 7 eur</label>
+        <div class="col-sm-9">
+          <div class="row">
+            <div class="col-sm-6">
+              <p class="lead"><i class="fa fa-truck"></i>Doručenie</p>
+              <ul id="kosik-dop" class="list-group">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="thumbnail"><img src="https://shield.sk/assets/loga/ups-logo.png" alt="Kuriér (1 až 2 dni)"></div>
+                    </div>
+                    <div class="col-xs-8">
+                      <input class="ch-dop-dop ch-cena" data-id="1" type="checkbox" data-zakazane="8" data-cena="2,80" value="on"> Kuriér (1 až 2 dni) <span>(€02,80)</span>
+                    </div>
+                    <div class="col-xs-2 text-right">
+                      <a href="#" class="btn-pop" data-toggle="popover" data-trigger="focus" title="" data-content="<p>Pri objedn&amp;aacute;vke cez pracovn&amp;yacute; t&amp;yacute;ždeň do 15:00 odosielame ihneď v&amp;nbsp;ten deň, doručenie kuri&amp;eacute;rom je nasleduj&amp;uacute;ci pracovn&amp;yacute; deň.&amp;nbsp;</p>"
+                      data-original-title="Kuriér (1 až 2 dni)"><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="thumbnail"><img src="https://shield.sk/assets/loga/posta.png" alt="Slovenská pošta (2 až 3 dni)"></div>
+                    </div>
+                    <div class="col-xs-10">
+                      <input class="ch-dop-dop ch-cena" data-id="4" type="checkbox" data-zakazane="8" data-cena="1,80" value="on"> Slovenská pošta (2 až 3 dni) <span>(€01,80)</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="termin">
+                <div class="kosik-dop-t hide">
+                  <label class="control-label">
+                    <input type="radio" name="TERMIN" checked="checked" value="0"> doručiť čo najskôr
+                  </label>
+                  <br>
+                  <label class="control-label">
+                    <input type="radio" name="TERMIN" value="1"> zadať dátum doručenia
+                  </label>
+                  <div class="input-group date hide" id="termin-wrapper">
+                    <input class="form-control datetimepicker" data-placement="top" data-toggle="tooltip" id="termin-control" name="termin-control" title="" type="text" value="14.11.2016" data-original-title="Doručenie na žiadaný dátum je možné najskôr na 3. pracovný deň.">
+                    <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="lead"><i class="glyphicon glyphicon-user"></i>Osobný odber </p>
+              <ul id="kosik-pob" class="list-group">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="thumbnail"><img src="https://shield.sk/assets/loga/shield_logo3_icon.png" alt="Bratislava, Cubicon Gallery"></div>
+                    </div>
+                    <div class="col-xs-10">
+                      <input class="ch-dop-pob ch-cena " data-id="6" type="checkbox" data-zakazane="6,11" data-cena="0,00" value="on"> Bratislava, Cubicon Gallery
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <p class="lead"><i class="fa fa-exchange"></i> Zvoľte spôsob platby</p>
+              <ul id="kosik-pla" class="list-group">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-xs-10">
+                      <input data-id="3" class="ch-pla ch-cena" data-cetelem="false" type="checkbox" data-cena="0,00" value="on"> Bankovým prevodom – platba predom
+                    </div>
+                    <div class="col-xs-2 text-right">
+                      <a href="#" class="btn-pop" data-toggle="popover" data-trigger="focus" title="" data-content="<p>S potvrden&amp;iacute;m objedn&amp;aacute;vky obdrž&amp;iacute;te mailom in&amp;scaron;trukcie k platbe.</p>
+<p>Platbu m&amp;ocirc;žete vložiť osobne na n&amp;aacute;&amp;scaron; &amp;uacute;čet v ČSOB, alebo uhradiť prevodom prostredn&amp;iacute;ctvom internet bankingu.</p>
+<p>Variabiln&amp;yacute; symbol s mus&amp;iacute; byť vždy uveden&amp;yacute; na platobnom pr&amp;iacute;kaze.</p>" data-original-title="Bankovým prevodom – platba predom "><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-xs-10">
+                      <input data-id="6" class="ch-pla ch-cena" data-cetelem="false" type="checkbox" data-cena="1,00" value="on"> Dobierka <span>(€01,00)</span>
+                    </div>
+                    <div class="col-xs-2 text-right">
+                      <a href="#" class="btn-pop" data-toggle="popover" data-trigger="focus" title="" data-content="<p>Pri predan&amp;iacute; z&amp;aacute;sielky zaplat&amp;iacute;te v hotovosti prepravcovi.</p>" data-original-title="Dobierka"><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-xs-10">
+                      <input data-id="8" class="ch-pla ch-cena" data-cetelem="false" type="checkbox" data-cena="0,00" value="on"> V hotovosti
+                    </div>
+                    <div class="col-xs-2 text-right">
+                      <a href="#" class="btn-pop" data-toggle="popover" data-trigger="focus" title="" data-content="<p>Tovar zaplat&amp;iacute;te v hotovosti alebo kartou priamo v na&amp;scaron;ej predajni.</p>
+<p>Platba kartou je možn&amp;aacute; v sume do 200&amp;euro;.</p>" data-original-title="V hotovosti"><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="thumbnail"><img src="https://shield.sk/assets/loga/visamaster.jpg" alt="Kartou online"></div>
+                    </div>
+                    <div class="col-xs-8">
+                      <input data-id="17" class="ch-pla ch-cena" data-cetelem="false" type="checkbox" data-cena="0,00" value="on"> Kartou online
+                    </div>
+                    <div class="col-xs-2 text-right">
+                      <a href="#" class="btn-pop" data-toggle="popover" data-trigger="focus" title="" data-content="<p>Po odoslan&amp;iacute; objedn&amp;aacute;vky budete automaticky presmerovan&amp;yacute; na platobn&amp;uacute; br&amp;aacute;nu ČSOB a.s., v&amp;scaron;etky inform&amp;aacute;cie o platbe bud&amp;uacute; uložen&amp;eacute; v kartovom centre ČSOB a.s., my nedisponuje žiadnym z t&amp;yacute;chto &amp;uacute;dajov. Br&amp;aacute;na je zabezpečen&amp;aacute; na najvy&amp;scaron;&amp;scaron;ej &amp;uacute;rovni a schv&amp;aacute;lena podľa pravidel VISA a MasterCard.&amp;nbsp;</p>"
+                      data-original-title="Kartou online"><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="thumbnail"><img src="https://shield.sk/assets/loga/paypal.png" alt="PayPal"></div>
+                    </div>
+                    <div class="col-xs-8">
+                      <input data-id="19" class="ch-pla ch-cena" data-cetelem="false" type="checkbox" data-cena="0,00" value="on"> PayPal
+                    </div>
+                    <div class="col-xs-2 text-right">
+                      <a href="#" class="btn-pop" data-toggle="popover" data-trigger="focus" title="" data-content="<p>Po odoslan&amp;iacute; objedn&amp;aacute;vky budete automaticky presmerovan&amp;yacute; na str&amp;aacute;nky PayPal, po &amp;uacute;hrade budete presmerovan&amp;yacute; nasp&amp;auml;ť k n&amp;aacute;m.</p>"
+                      data-original-title="PayPal"><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <h1 class="display-1">Platba</h1>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="">Hotovosť na pobočke</label>
+        <div class="col-sm-3">
+          <div>
+            <p> <span class="glyphicon glyphicon-check"></span> doručenie do 2 dní, zvyčajne do 24 hodín na tovar skladom</p>
+            <p> <span class="glyphicon glyphicon-check"></span> možnosť zadať žiadaný dátum doručenia</p>
+            <p> <span class="glyphicon glyphicon-check"></span> online sledovanie objednávky aj zásielky</p>
           </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="">Online kartou</label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="">Dobierkou</label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="">Bankový prevod</label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="">TatraPay</label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="">SporoPay</label>
-          </div>
+
         </div>
       </div>
     </div>
@@ -183,13 +284,12 @@
   </div>
   <div class="section">
     <div class="container">
-
       <div class="bg-inverse row text-xs-right">
         <div class="col-md-3">
-          <a href="#" class="btn btn-block btn-primary-outline">Späť</a>
+          <a href="Order1.html" class="btn btn-block btn-outline-secondary">Späť</a>
         </div>
         <div class="col-d-offset-6 col-md-3 col-md-offset-6">
-          <a href="#" class="btn btn-block btn-primary">Pokračovať</a>
+          <a href="Order3.html" class="btn btn-block btn-primary">Pokračovať</a>
         </div>
       </div>
     </div>
@@ -200,98 +300,76 @@
   <!-- Custom Theme JavaScript -->
   <script>
     // Closes the sidebar menu
-            $("#menu-close").click(function(e) {
-                e.preventDefault();
-                $("#sidebar-wrapper").toggleClass("active");
-            });
-            // Opens the sidebar menu
-            $("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#sidebar-wrapper").toggleClass("active");
-            });
-            // Scrolls to the selected menu item on the page
-            $(function() {
-                $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                        if (target.length) {
-                            $('html,body').animate({
-                                scrollTop: target.offset().top
-                            }, 1000);
-                            return false;
+                    $("#menu-close").click(function(e) {
+                        e.preventDefault();
+                        $("#sidebar-wrapper").toggleClass("active");
+                    });
+                    // Opens the sidebar menu
+                    $("#menu-toggle").click(function(e) {
+                        e.preventDefault();
+                        $("#sidebar-wrapper").toggleClass("active");
+                    });
+                    // Scrolls to the selected menu item on the page
+                    $(function() {
+                        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                                var target = $(this.hash);
+                                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                                if (target.length) {
+                                    $('html,body').animate({
+                                        scrollTop: target.offset().top
+                                    }, 1000);
+                                    return false;
+                                }
+                            }
+                        });
+                    });
+                    //#to-top button appears after scrolling
+                    var fixed = false;
+                    $(document).scroll(function() {
+                        if ($(this).scrollTop() > 250) {
+                            if (!fixed) {
+                                fixed = true;
+                                // $('#to-top').css({position:'fixed', display:'block'});
+                                $('#to-top').show("slow", function() {
+                                    $('#to-top').css({
+                                        position: 'fixed',
+                                        display: 'block'
+                                    });
+                                });
+                            }
+                        } else {
+                            if (fixed) {
+                                fixed = false;
+                                $('#to-top').hide("slow", function() {
+                                    $('#to-top').css({
+                                        display: 'none'
+                                    });
+                                });
+                            }
                         }
+                    });
+                    // Disable Google Maps scrolling
+                    // See http://stackoverflow.com/a/25904582/1607849
+                    // Disable scroll zooming and bind back the click event
+                    var onMapMouseleaveHandler = function(event) {
+                        var that = $(this);
+                        that.on('click', onMapClickHandler);
+                        that.off('mouseleave', onMapMouseleaveHandler);
+                        that.find('iframe').css("pointer-events", "none");
                     }
-                });
-            });
-            //#to-top button appears after scrolling
-            var fixed = false;
-            $(document).scroll(function() {
-                if ($(this).scrollTop() > 250) {
-                    if (!fixed) {
-                        fixed = true;
-                        // $('#to-top').css({position:'fixed', display:'block'});
-                        $('#to-top').show("slow", function() {
-                            $('#to-top').css({
-                                position: 'fixed',
-                                display: 'block'
-                            });
-                        });
-                    }
-                } else {
-                    if (fixed) {
-                        fixed = false;
-                        $('#to-top').hide("slow", function() {
-                            $('#to-top').css({
-                                display: 'none'
-                            });
-                        });
-                    }
-                }
-            });
-            // Disable Google Maps scrolling
-            // See http://stackoverflow.com/a/25904582/1607849
-            // Disable scroll zooming and bind back the click event
-            var onMapMouseleaveHandler = function(event) {
-                var that = $(this);
-                that.on('click', onMapClickHandler);
-                that.off('mouseleave', onMapMouseleaveHandler);
-                that.find('iframe').css("pointer-events", "none");
-            }
-            var onMapClickHandler = function(event) {
-                    var that = $(this);
-                    // Disable the click handler until the user leaves the map area
-                    that.off('click', onMapClickHandler);
-                    // Enable scrolling zoom
-                    that.find('iframe').css("pointer-events", "auto");
-                    // Handle the mouse leave event
-                    that.on('mouseleave', onMapMouseleaveHandler);
-                }
-                // Enable map zooming with mouse scroll when the user clicks the map
-            $('.map').on('click', onMapClickHandler);
+                    var onMapClickHandler = function(event) {
+                            var that = $(this);
+                            // Disable the click handler until the user leaves the map area
+                            that.off('click', onMapClickHandler);
+                            // Enable scrolling zoom
+                            that.find('iframe').css("pointer-events", "auto");
+                            // Handle the mouse leave event
+                            that.on('mouseleave', onMapMouseleaveHandler);
+                        }
+                        // Enable map zooming with mouse scroll when the user clicks the map
+                    $('.map').on('click', onMapClickHandler);
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
