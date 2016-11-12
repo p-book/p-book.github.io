@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -33,68 +34,36 @@
 <body>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>P-Book</a>
-            </li>
-            <li>
-                <a href="#top" onclick=$("#menu-close").click();>Domov</a>
-            </li>
-            <li>
-                <a href="#" onclick=$("#menu-close").click();>Fotokniha (Editor)</a>
-            </li>
-            <li>
-                <a href="pricing.html" onclick=$("#menu-close").click();>Cennik</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Produkty</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Kontakt</a>
-            </li>
-            <li class="dropdown">
-          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Prihlásiť sa <span class="caret"></span></a>
-				<ul id="login-dp" class="dropdown-menu">
-					<li>
-						<div class="row">
-							<div class="col-md-12">
-								<h5 class="sidebar-login-text">Prihlásiť sa cez</h5>
-								<div class="social-buttons">
-									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-									<a href="#" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
-								</div>
-                                <h5 class="sidebar-login-text">alebo</h5>
-								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-										<div class="form-group">
-											 <label class="sr-only" for="exampleInputEmail2">Email</label>
-											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email" required>
-										</div>
-										<div class="form-group">
-											 <label class="sr-only" for="exampleInputPassword2">Heslo</label>
-											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Heslo" required>
-                                             <div class="help-block text-right"><a href="" class="non-bg"><h5 class="sidebar-login-text lost-pass">Zabudli ste heslo?</h5></a></div>
-										</div>
-										<div class="form-group">
-											 <button type="submit" class="btn btn-primary btn-block">Prihlásiť</button>
-										</div>
-										<div class="checkbox">
-											 <label>
-											 <input type="checkbox"><h5 class="sidebar-login-text">Zostať prihlásený</h5>
-											 </label>
-										</div>
-								 </form>
-							</div>
-							<div class="bottom text-center">
-								<a href="register.html"><b>Registrovať sa</b></a>
-							</div>
-					 	</div>
-					</li>
-				</ul>
-        	</li>
-        </ul>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a id='navText'class="navbar-brand page-scroll" href="#top">P-Book</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Domov</a>
+                    </li>
+                    <li>
+                        <a href="#">Fotokniha (Editor)</a>
+                    </li>
+                    <li>
+                        <a href="#services">Na&#353;e slu&#382;by & Cenn&#237;k</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Produkty</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
     </nav>
 
     <!-- Header -->
@@ -107,19 +76,39 @@
         </div>
     </header>
 
-    <!-- About -->
+    <!-- About -> Book Format -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                <div class="col-lg-12 text-center books_format">
+                    <h2>Form&#225;t</h2>
+                    <ul>
+                    <li>
+                        <img class="img-portfolio img-responsive" src="img/format_book.jpg">
+                        <h3>Kniha (Landscape)</h3>
+                        <br />
+                        <a href="#" class="btn btn-lg btn-dark">Vytvori&#357;</a>
+                    </li>
+                    <li>
+                        <img class="img-portfolio img-responsive" src="img/format_book2.jpg">
+                        <h3>Kniha (Portrait)</h3>
+                        <br />
+                        <a href="#" class="btn btn-lg btn-dark">Vytvori&#357;</a>
+                    </li>
+                    <li>
+                        <img class="img-portfolio img-responsive" src="img/format_magazine.jpg">
+                        <h3>&#268;asopis</h3>
+                        <br />
+                        <a href="#contact" class="btn btn-lg btn-dark">Vytvori&#357;</a>
+                    </li>
+                    </ul>
                 </div>
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
+
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -195,7 +184,7 @@
     <!-- Callout -->
     <aside class="callout">
         <div class="text-vertical-center text-services">
-            <h1>Vertically Centered Text</h1>
+            <h1>Pozrie&#357; cenn&#237;k</h1>
         </div>
     </aside>
 
@@ -251,63 +240,68 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                    <h3>Navrhnite si vlastn&#250; fotoknihu</h3>
+                    <!--<a href="#" class="btn btn-lg btn-light">Click Me!</a>-->
+                    <a href="#" class="btn btn-lg btn-dark">Vytvori&#357; teraz</a>
                 </div>
             </div>
         </div>
     </aside>
 
     <!-- Map -->
-    <section id="contact" class="map">
+    <!--<section id="contact" class="map">
         <div style="width: 100%"><iframe width="100%" height="600" src="http://www.maps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=Ilkovi%C4%8Dova%202%2C%20841%2004%20Bratislava-Karlova%20Ves%2C%20Slovensko+(P-Book%20s.r.o)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="http://www.maps.ie/create-google-map/">Google Maps HTML</a> on <a href="http://www.maps.ie/">Ireland Maps</a></iframe></div>
         <br />
         <small>
             <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
         </small>
         </iframe>
-    </section>
+    </section>-->
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>P-Book</strong>
-                    </h4>
-                    <p>Ilkovičova 2
-                        <br>Bratislava, 841 04</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">support@p-book.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2016</p>
+    <section id="contact">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <h4><strong>P-Book</strong>
+                        </h4>
+                        <p>Ilkovičova 2
+                            <br>Bratislava, 841 04</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                            <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">support@p-book.com</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                            </li>
+                        </ul>
+                        <hr class="small">
+                        <p class="text-muted">Copyright &copy; Your Website 2016</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
+            <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+        </footer>
+    </section>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>

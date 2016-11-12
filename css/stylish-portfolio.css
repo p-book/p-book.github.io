@@ -338,7 +338,7 @@ li.dropdown.open a {
     margin-bottom: 10px;
 }
 .btn-fb{
-    margin-bottom: 12px;
+    margin-bottom: 12px !important;
     color: #fff !important;
     background-color:#3b5998;
 }
@@ -371,4 +371,49 @@ li.dropdown.open a {
         background-color: inherit;
         border-top:0 none;
     }
+}
+/* misko*/
+
+.editor {
+    position: relative;
+
+}
+#placeholder1   {
+    position: absolute;
+   top: 0px;
+   left: 15px;
+
+}
+#placeholder2   {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+.placeholder{
+    width: 150px;
+    height: 150px;
+    padding: 0.5em;
+}
+
+#dragThis {
+    width: 6em;
+    height: 6em;
+    padding: 0.5em;
+    border: 3px solid #ccc;
+    border-radius: 0 1em 1em 1em;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#dropHere {
+    width: 12em;
+    height: 12em;
+    padding: 0.5em;
+    border: 3px solid #f90;
+    border-radius: 1em;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: absolute;
 }

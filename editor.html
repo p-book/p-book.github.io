@@ -21,6 +21,7 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -84,7 +85,7 @@
                                 <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Pozadie <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="#">Pozadie 1</a></li>
+                                    <li><a href="#"><img src="img/Debil.jpg"/> </a></li>
                                     <li><a href="#">Pozadie 2</a></li>
                                     <li><a href="#">Pozadie 3</a></li>
                                     <li role="separator" class="divider"></li>
@@ -107,14 +108,26 @@
                     <div class="container-fluid"> <!-- this is to make it responsive to your screen width-->
                         <div class="row">
                             <div class="col-md-9 editor">  <!-- myClassName is defined in my CSS as you defined your container -->
-                                <img class="img-editorbg img-responsive" src="img/editor-bg.jpg">
+                                <img class="img-editorbg img-responsive" src="img/editor-bg.jpg" alt=""/>
+                                <h4>Loaded photos</h4>
+                                <div class="col-md-1 wrapper" style="display:inline-block">
+                                    <img id="image" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                </div>
+                                <div class="wrapper col-md-1 col-md-offset-2" style="display:inline-block">
+                                    <img id="image2" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                </div>
+                                <div class="wrapper col-md-1 col-md-offset-4" style="display:inline-block">
+                                    <img id="image3" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                </div>
+                                <div class="wrapper col-md-1 col-md-offset-6" style="display:inline-block">
+                                    <img id="image4" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-
         </section>
 
 
@@ -128,55 +141,38 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $("#genTitle").click(function(){
+      $( function() {
+          $( ".placeholder" ).draggable({
+              containment: "parent"
+          });
 
-    // Fetch Input Value
-    var val = $("#newTitle").val();
-
-    // Set the value fetched as the html of header
-    $(".artTitle").html(val);
-});
+      } );
 
 
-        $('#fullname').click(function(){
-            var name = $(this).text();
-            $(this).html('');
-            $('<input></input>')
-            .attr({
-                'type': 'text',
-                'name': 'fname',
-                'id': 'txt_fullname',
-                'size': '15',
-                'value': name
-            })
-            .appendTo('#fullname');
-            $('#txt_fullname').focus();
-        });
+      $(function() {
+          $('.wrapper').draggable({
+              containment: "parent"
+          });
+          $('#image').resizable().click(function () {
+              $(this).attr('src', 'img/troll.jpg')
+          });
+      });
+      $(function() {
+          $('#image2').resizable().click(function () {
+              $(this).attr('src', 'img/troll.jpg')
+          });
+      });
+      $(function() {
+          $('#image3').resizable().click(function () {
+              $(this).attr('src', 'img/troll.jpg')
+          });
+      });
+      $(function() {
+          $('#image4').resizable().click(function () {
+              $(this).attr('src', 'img/troll.jpg')
+          });
+      });
 
-        $(document).on('blur','#txt_fullname', function(){
-            var name = $(this).val();
-            $.ajax({
-              type: 'post',
-              url: 'change-name.xhr?name=' + name,
-              success: function(){
-                $('#fullname').text(name);
-            }
-        });
-        });
-        $( function() {
-            $( "#rectangle" ).draggable();
-            containment: "parent"
-            cursor: "crosshair"
-        } );
 
-        $(function() {
-          $("rectangle").click(function() {
-            $(this).css('background-image', 'url(imag/Debil.jpg)');
-        });
-      }):
-
-        function hideIcon(self) {
-            self.style.backgroundImage = 'none';
-        }
     </script>
     </html>
