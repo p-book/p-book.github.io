@@ -306,11 +306,11 @@ li.dropdown.open a {
 
 
 #login-dp{
-    min-width: 250px;
+    min-width: 350px;
     padding: 14px 14px 0;
     overflow:hidden;
     /*background-color:rgba(255,255,255,.8);*/
-    background-color: #222;
+    background-color: white;
 }
 #login-dp li {
     text-indent: 0px;
