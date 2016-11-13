@@ -27,95 +27,34 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+ 
 </head>
 
 <body>
-  <!-- Navigation -->
-  <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-  <nav id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-      <li class="sidebar-brand">
-        <a href="#top" onclick="$(&quot;#menu-close&quot;).click();">P-Book</a>
-      </li>
-      <li>
-        <a href="index.html#top" onclick="$(&quot;#menu-close&quot;).click();">Domov</a>
-      </li>
-      <li>
-        <a href="#" onclick="$(&quot;#menu-close&quot;).click();">Fotokniha (Editor)</a>
-      </li>
-      <li>
-        <a href="pricing.html" onclick="$(&quot;#menu-close&quot;).click();">Cennik</a>
-      </li>
-      <li>
-        <a href="#portfolio" onclick="$(&quot;#menu-close&quot;).click();">Produkty</a>
-      </li>
-      <li>
-        <a href="#contact" onclick="$(&quot;#menu-close&quot;).click();">Kontakt</a>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prihlásiť sa <span class="caret"></span></a>
-        <ul id="login-dp" class="dropdown-menu">
-          <li>
-            <div class="row">
-              <div class="col-md-12">
-                <h5 class="sidebar-login-text">Prihlásiť sa cez</h5>
-                <div class="social-buttons">
-                  <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                  <a href="#" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
-                </div>
-                <h5 class="sidebar-login-text">alebo</h5>
-                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                  <div class="form-group">
-                    <label class="sr-only" for="exampleInputEmail2">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email" required="">
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="exampleInputPassword2">Heslo</label>
-                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Heslo" required="">
-                    <div class="help-block text-right">
-                      <a href="" class="non-bg"><h5 class="sidebar-login-text lost-pass">Zabudli ste heslo?</h5></a>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Prihlásiť</button>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" value="on">
-                      <h5 class="sidebar-login-text">Zostať prihlásený</h5>
-                    </label>
-                  </div>
-                </form>
-              </div>
-              <div class="bottom text-center">
-                <a href="#"><b>Registrovať sa</b></a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
   <div class="container">
     <div class="row main">
       <div class="panel-heading">
         <div class="panel-title text-center">
-          <h1 class="title">P-Book</h1>
+          <a href="index.html"> <h1 class="title">P-Book</h1></a>
           <hr>
         </div>
         <div class="row">
           <div class="col-lg-3">
-            <h1 class="display-1"><i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;Košík</h1>
+            <h1 class="display-1 text-primary">
+                                <i class="glyphicon glyphicon-shopping-cart text-primary"></i>&nbsp;Košík</h1>
           </div>
           <div class="col-lg-3      ">
-            <h1 class="display-1"><i class="glyphicon glyphicon-credit-card"></i>&nbsp;Doprava a platba</h1>
+            <h1 class="display-1">
+                                <i class="glyphicon glyphicon-credit-card"></i>&nbsp;Doprava a platba</h1>
           </div>
           <div class="col-lg-3 ">
-            <h1 class="display-1"><i class="glyphicon glyphicon-globe"></i>&nbsp;Dodacie údaje</h1>
+            <h1 class="display-1">
+                                <i class="glyphicon glyphicon-globe"></i>&nbsp;Dodacie údaje</h1>
           </div>
           <div class="col-lg-3">
-            <h1 class="display-1"><i class="glyphicon glyphicon-check"></i>&nbsp;Súhrn</h1>
+            <h1 class="display-1">
+                                <i class="glyphicon glyphicon-check"></i>&nbsp;Súhrn</h1>
           </div>
         </div>
       </div>
@@ -138,21 +77,46 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Obal</td>
-                  <td>1</td>
-                  <td>10 $</td>
+                  <td><b>Obal</b></td>
+
+
                 </tr>
                 <tr>
-                  <td>Väzba</td>
+                  <td style="padding-left:3em">Špeciálny poťah</td>
                   <td>1</td>
-                  <td>15 $
-                    <br>
-                  </td>
+                  <td>10,00 $</td>
+                </tr>
+
+                <tr>
+                  <td><b>Väzba</b></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td style="padding-left:3em">Knižná väzba</td>
+                  <td>1</td>
+                  <td>15,00 $</td>
                 </tr>
                 <tr>
-                  <td>Fotky</td>
-                  <td>30</td>
-                  <td>26,90 $</td>
+                  <td><b>Fotky</b></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td style="padding-left:3em">Fotka 8x7cm</td>
+                  <td>12</td>
+                  <td>7,80 $</td>
+                </tr>
+                <tr>
+                  <td style="padding-left:3em">Fotka 12x10</td>
+                  <td>15</td>
+                  <td>12,75 $</td>
+                </tr>
+                <tr>
+                  <td style="padding-left:3em">Fotka 16x10</td>
+                  <td>3</td>
+                  <td>6,45 $</td>
                 </tr>
               </tbody>
             </table>
@@ -178,14 +142,15 @@
           <h2>Celkom k úhrade</h2>
         </div>
         <div class="col-md-2 ">
-          <h2 class="">66,90 $</h2></div>
+          <h2 class="">66,90 $</h2>
+        </div>
       </div>
       <div class="bg-inverse row text-xs-right">
         <div class="col-md-3">
-          <a href="#" class="btn btn-block btn-primary-outline">Späť</a>
+          <a href="editor1.html" class="btn btn-block btn-outline-secondary">Späť</a>
         </div>
         <div class="col-d-offset-6 col-md-3 col-md-offset-6">
-          <a href="#" class="btn btn-block btn-primary">Pokračovať</a>
+          <a href="Order2.html" class="btn btn-block btn-primary">Pokračovať</a>
         </div>
       </div>
     </div>
@@ -196,88 +161,76 @@
   <!-- Custom Theme JavaScript -->
   <script>
     // Closes the sidebar menu
-            $("#menu-close").click(function(e) {
-                e.preventDefault();
-                $("#sidebar-wrapper").toggleClass("active");
-            });
-            // Opens the sidebar menu
-            $("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#sidebar-wrapper").toggleClass("active");
-            });
-            // Scrolls to the selected menu item on the page
-            $(function() {
-                $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                        if (target.length) {
-                            $('html,body').animate({
-                                scrollTop: target.offset().top
-                            }, 1000);
-                            return false;
+                    $("#menu-close").click(function(e) {
+                        e.preventDefault();
+                        $("#sidebar-wrapper").toggleClass("active");
+                    });
+                    // Opens the sidebar menu
+                    $("#menu-toggle").click(function(e) {
+                        e.preventDefault();
+                        $("#sidebar-wrapper").toggleClass("active");
+                    });
+                    // Scrolls to the selected menu item on the page
+                    $(function() {
+                        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                                var target = $(this.hash);
+                                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                                if (target.length) {
+                                    $('html,body').animate({
+                                        scrollTop: target.offset().top
+                                    }, 1000);
+                                    return false;
+                                }
+                            }
+                        });
+                    });
+                    //#to-top button appears after scrolling
+                    var fixed = false;
+                    $(document).scroll(function() {
+                        if ($(this).scrollTop() > 250) {
+                            if (!fixed) {
+                                fixed = true;
+                                // $('#to-top').css({position:'fixed', display:'block'});
+                                $('#to-top').show("slow", function() {
+                                    $('#to-top').css({
+                                        position: 'fixed',
+                                        display: 'block'
+                                    });
+                                });
+                            }
+                        } else {
+                            if (fixed) {
+                                fixed = false;
+                                $('#to-top').hide("slow", function() {
+                                    $('#to-top').css({
+                                        display: 'none'
+                                    });
+                                });
+                            }
                         }
+                    });
+                    // Disable Google Maps scrolling
+                    // See http://stackoverflow.com/a/25904582/1607849
+                    // Disable scroll zooming and bind back the click event
+                    var onMapMouseleaveHandler = function(event) {
+                        var that = $(this);
+                        that.on('click', onMapClickHandler);
+                        that.off('mouseleave', onMapMouseleaveHandler);
+                        that.find('iframe').css("pointer-events", "none");
                     }
-                });
-            });
-            //#to-top button appears after scrolling
-            var fixed = false;
-            $(document).scroll(function() {
-                if ($(this).scrollTop() > 250) {
-                    if (!fixed) {
-                        fixed = true;
-                        // $('#to-top').css({position:'fixed', display:'block'});
-                        $('#to-top').show("slow", function() {
-                            $('#to-top').css({
-                                position: 'fixed',
-                                display: 'block'
-                            });
-                        });
-                    }
-                } else {
-                    if (fixed) {
-                        fixed = false;
-                        $('#to-top').hide("slow", function() {
-                            $('#to-top').css({
-                                display: 'none'
-                            });
-                        });
-                    }
-                }
-            });
-            // Disable Google Maps scrolling
-            // See http://stackoverflow.com/a/25904582/1607849
-            // Disable scroll zooming and bind back the click event
-            var onMapMouseleaveHandler = function(event) {
-                var that = $(this);
-                that.on('click', onMapClickHandler);
-                that.off('mouseleave', onMapMouseleaveHandler);
-                that.find('iframe').css("pointer-events", "none");
-            }
-            var onMapClickHandler = function(event) {
-                    var that = $(this);
-                    // Disable the click handler until the user leaves the map area
-                    that.off('click', onMapClickHandler);
-                    // Enable scrolling zoom
-                    that.find('iframe').css("pointer-events", "auto");
-                    // Handle the mouse leave event
-                    that.on('mouseleave', onMapMouseleaveHandler);
-                }
-                // Enable map zooming with mouse scroll when the user clicks the map
-            $('.map').on('click', onMapClickHandler);
+                    var onMapClickHandler = function(event) {
+                            var that = $(this);
+                            // Disable the click handler until the user leaves the map area
+                            that.off('click', onMapClickHandler);
+                            // Enable scrolling zoom
+                            that.find('iframe').css("pointer-events", "auto");
+                            // Handle the mouse leave event
+                            that.on('mouseleave', onMapMouseleaveHandler);
+                        }
+                        // Enable map zooming with mouse scroll when the user clicks the map
+                    $('.map').on('click', onMapClickHandler);
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

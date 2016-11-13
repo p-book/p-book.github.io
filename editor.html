@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+    <title>Editor</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -31,33 +31,89 @@
 
     </head>
     <body>
-        <div class="container">
-            <div class="row main">
-                <div class="panel-heading">
-                    <div class="panel-title text-center">
-                        <h1 class="title">P-Book</h1>
-                        <hr />
-                    </div>
-                </div> 
+    <!-- Navigation -->
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a id='navText'class="navbar-brand page-scroll logo" href="#top">P-Book</a>
             </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Domov</a>
+                    </li>
+                    <li>
+                        <a href="#services">Na&#353;e slu&#382;by & Cenn&#237;k</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Produkty</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prihl&#225;si&#357;<span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h5>Prihlásiť sa cez</h5>
+                                        <div class="social-buttons">
+                                            <a href="https://sk-sk.facebook.com/" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                            <a href="https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=sk#identifier" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
+                                        </div>
+                                        <h5 class="sidebar-login-text" style="color: black">alebo</h5>
+                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Email</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputPassword2">Heslo</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Heslo" required>
+                                                <div class="help-block text-right"><a href="" style="color: black"><h5>Zabudli ste heslo?</h5></a></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">Prihlásiť</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="register.html">Registrova&#357;</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container-fluid -->
 
         <section id="editor" class="editor">
             <div class="container">
                 <div class="row">
+                    <div class="text-center">
+                        <ul class="pagination">
+                            <li class="active"><a href="editor1.html">1</a></li>
+                        </ul>
+                    </div>
                     <div class="col-md-3">
-                        <h1 id="fullname">Názov knihy</h1>
+                        <div id="example-one" contenteditable="true">
+                            <style scoped>
+                                #example-one { margin-bottom: 10px; }
+                                [contenteditable="true"] { padding: 5px; outline: 2px dashed #CCC; }
+                                [contenteditable="true"]:hover { outline: 2px dashed #0090D2; }
+                            </style>
+                            <h1>Názov</h1>
+                        </div>
                         <div class="span">
                             <button type="button" class="btn btn-default btn-block">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pridaj stranu
-                            </button> 
-
-                            <button type="button" class="btn btn-default btn-block text-left" aria-label="Left Align">
-                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pridaj miesto na fotku
-                            </button> 
-                            <button type="button" class="btn btn-default text-left btn-block" aria-label="Left Align">
-                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pridaj text
-                            </button> 
+                            </button>
 
 
                             <div class="dropdown">
@@ -93,7 +149,7 @@
                                     <li><a href="#">Vlastné pozadie</a></li>
                                 </ul>
                             </div>
-                            <div class="dropdown">
+                            <div class="dropdown special">
                                 <h4>Väzba:</h4>
                                 <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Väzba <span class="caret"></span>
                                 </button>
@@ -103,6 +159,11 @@
                                     <li><a href="#">Kalendárová</a></li>
                                 </ul>
                             </div>
+                            <div class="button_holder">
+                                <h4>Dokončenie:</h4>
+                                <a href="Order1.html" class="btn btn-block btn-primary" role="button">Objednať</a>
+                                <a href="#" class="btn btn-block btn-primary disabled" role="button">Uložiť</a>
+                            </div>
                         </div>
                     </div>
 
@@ -111,23 +172,35 @@
                             <div class="col-md-9 editor">  <!-- myClassName is defined in my CSS as you defined your container -->
                                 <img id="background_image" class="img-editorbg img-responsive" src="img/editor-bg.jpg" alt=""/>
 								<img id="rozlozenie" class="img-editorbg img-responsive" src="img/rozlozenie_vlastne.png" style="position: absolute; top: 0px; left: 15px;" height="529,68px" width="847,5px"alt=""/>
-                                <h4>Loaded photos</h4>
-                                <div class="col-md-1 wrapper" style="display:inline-block">
-                                    <img id="image" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                <h4>Vaše obrázky (presuňte na pozadie): </h4>
+                                <div class="col-md-2">
+                                    <div class="col-md-2 wrapper" style="display:inline-block">
+                                        <img id="image" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                    </div>
                                 </div>
-                                <div class="wrapper col-md-1 col-md-offset-2" style="display:inline-block">
-                                    <img id="image2" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                <div class="col-md-2">
+                                    <div class="wrapper col-md-2 " style="display:inline-block">
+                                        <img id="image2" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                    </div>
                                 </div>
-                                <div class="wrapper col-md-1 col-md-offset-4" style="display:inline-block">
-                                    <img id="image3" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                <div class="col-md-2">
+                                    <div class="wrapper col-md-2 " style="display:inline-block">
+                                        <img id="image3" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                    </div>
                                 </div>
-                                <div class="wrapper col-md-1 col-md-offset-6" style="display:inline-block">
-                                    <img id="image4" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                <div class="col-md-2">
+                                    <div class="wrapper col-md-2" style="display:inline-block">
+                                        <img id="image4" class="img_move" src="img/placeholder2.png" height="105px" width="105px" />
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="display:inline-block">
+                                    <button id="btnCadastrar" type="button" data-container="body" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="bottom" title="Pridaj fotku">
+                                        <img src="img/add.png" height="90px" width="90px" />
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -143,17 +216,9 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-      $( function() {
-          $( ".placeholder" ).draggable({
-              containment: "parent"
-          });
-
-      } );
-
-
       $(function() {
           $('.wrapper').draggable({
-              containment: "parent"
+              containment: "#background_image"
           });
           $('#image').resizable().click(function () {
               $(this).attr('src', 'img/troll.jpg')
@@ -209,6 +274,8 @@
               $('#rozlozenie').attr('src', 'img/rozlozenie_vlastne.png')
           });
       });
+      $('[rel=tooltip]').tooltip({container: 'body'});
+      $('[data-toggle="tooltip"]').tooltip();
 
 
     </script>
