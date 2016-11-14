@@ -1,43 +1,106 @@
 <html>
 
 <head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Stylish Portfolio - Start Bootstrap Theme</title>
-  <!-- Bootstrap Core CSS
-        -->
+
+  <title>Editor</title>
+
+  <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+
   <!-- Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
-        queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file://
-        -->
+
+  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-  <link rel="stylesheet" href="css/stylish-portfolio.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
 </head>
 
 <body>
+<!-- Navigation -->
+<nav id="mainNav" class="navbar navbar-default navbar-register navbar-fixed-top">
+  <div id="register-navbar" class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a id="register-title" class="navbar-brand page-scroll" href="index.html">P-Book</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right nav-other-page">
+        <li>
+          <a href="index.html">Domov</a>
+        </li>
+        <li>
+          <a href="pricing.html">Na&#353;e slu&#382;by & Cenn&#237;k</a>
+        </li>
+        <li>
+          <a href="#portfolio">Produkty</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prihl&#225;si&#357;<span class="caret"></span></a>
+          <ul id="login-dp" class="dropdown-menu">
+            <li>
+              <div class="row">
+                <div class="col-md-12">
+                  <h5>Prihlásiť sa cez</h5>
+                  <div class="social-buttons">
+                    <a href="https://sk-sk.facebook.com/" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                    <a href="https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=sk#identifier" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
+                  </div>
+                  <h5 class="sidebar-login-text" style="color: black">alebo</h5>
+                  <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                    <div class="form-group">
+                      <label class="sr-only" for="inputEmail1">Email</label>
+                      <input type="email" class="form-control" id="inputEmail1" placeholder="Email" required>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="exampleInputPassword2">Heslo</label>
+                      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Heslo" required>
+                      <div class="help-block text-right"><a href="" style="color: black"><h5>Zabudli ste heslo?</h5></a></div>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-block">Prihlásiť</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="navbar-active-link" href="register.html">Registrova&#357;</a>
+        </li>
+        <li>
+          <a href="#contact">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
   <div class="container">
     <div class="row main">
       <div class="panel-heading">
-        <div class="panel-title text-center">
-          <a href="index.html"> <h1 class="title">P-Book</h1></a>
-          <hr>
-        </div>
-        <div class="row">
+        <div class="row counter">
           <div class="col-lg-3">
             <h1 class="display-1">
                                 <i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;Košík</h1>
