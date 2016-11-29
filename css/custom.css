@@ -76,7 +76,7 @@
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: red;
+  color: rgb(123, 124, 124);
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
@@ -89,7 +89,9 @@
 }
 @media (min-width: 768px) {
   .navbar-default {
-    background-color: transparent;
+    /*background-color: transparent;*/
+      background-color: white;
+      border-color: rgba(34, 34, 34, 0.05);
     /*border-color: rgba(255, 255, 255, 0.3);*/
   }
 
@@ -109,7 +111,7 @@
   }
   .navbar-default .nav > li > a:hover,
   .navbar-default .nav > li > a:focus:hover {
-    color: white;
+    color: rgb(123, 124, 124);
   }
   .navbar-default.affix {
     background-color: white;

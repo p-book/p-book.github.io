@@ -34,25 +34,22 @@
 <body>
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a id='navText'class="navbar-brand page-scroll" href="#top">P-Book</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#top" style="color: black">P-Book</a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">Domov</a>
-                    </li>
-                    <li>
-                        <a href="#services">Na&#353;e slu&#382;by & Cenn&#237;k</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Produkty</a>
-                    </li>
+                    <li class="active"><a href="index.html">Domov <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#services">Na&#353;e slu&#382;by & Cenn&#237;k</a></li>
+                    <li><a href="#portfolio">Produkty</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prihl&#225;si&#357;<span class="caret"></span></a>
                         <ul id="login-dp" class="dropdown-menu">
@@ -84,17 +81,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="register.html">Registrova&#357;</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Kontakt</a>
-                    </li>
+                    <li><a href="register.html">Registrova&#357;</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
     </nav>
 
     <!-- Header -->
